@@ -1,0 +1,12 @@
+.video-list{
+    display: flex;
+    justify-content: center;
+}
+
+.Video-item img{
+    max-width: 250px;
+}
+
+.Video-item{
+    width: 260px;
+}

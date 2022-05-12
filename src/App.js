@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import  Search from './component/Search'
+import Videolist from './component/Videolist'
+import PlayingVideo from './component/PlayingVideo';
+import youtube from './Apis/youtube'
+import { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [videos, setVideos] = useState([]);
+  const [videoSelect, setVideoSelect] =useState(null)
+  const search = async (search) => {
+      const response = await youtube.get('./search', {
+        params:{
+          q: search
+        }
+      })
+      setVideos(response.data.items);
+  }
+
+      // const onVideoSelect = video =>{
+      //   setVideoSelect(video)
+      // }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search search={search}/>
+      <PlayingVideo />
+      <Videolist videos={videos} />
     </div>
   );
 }

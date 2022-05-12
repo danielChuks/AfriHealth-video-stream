@@ -1,0 +1,15 @@
+.search{
+    margin-top: 50px;
+    margin-bottom: 60px;
+
+}
+
+.input-control{
+    width: 320px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.margin{
+    margin-right: 3px !important;
+}
