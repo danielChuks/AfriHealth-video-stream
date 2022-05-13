@@ -2,18 +2,11 @@ import React from 'react';
 import './ComponentSyles.css'
 
 
-const style = {
-    height: '200px',
-    width: '100%'
-
-}
-
 const VideoDetails = ({ video }) => {
     if(!video){
-        return <p>Loading...</p>
+        return <p>USE THE SEARCH</p>
     }
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`
-    console.log(videoSrc)
     return(
         <div>
             <div className="">
