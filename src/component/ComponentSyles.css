@@ -9,4 +9,13 @@
 
 .Video-item{
     width: 260px;
+    cursor: pointer;
+}
+
+.description{
+ margin-top: 0;
+}
+
+.html5-video-container{
+    width: 100%
 }

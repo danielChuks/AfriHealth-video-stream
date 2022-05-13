@@ -21,7 +21,7 @@ const Search = (props) => {
             onChange={(e) => setSearch(e.target.value)}
             type='text' 
             placeholder='Search here'/>
-            <button className='btn btn-outline-dark py-3'>Submit</button>
+            <button className='btn btn-outline-light py-3'>Submit</button>
         </div>
       </form>
     </div>
